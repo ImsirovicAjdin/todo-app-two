@@ -23,6 +23,40 @@
           Clear All
         </b-button>
     </b-form>
+
+    <div class="mt-5">  <!-- (3) -->
+        <ul class="lead">
+        <li v-for="(todo, index) in todos" class="py-1" v-bind:key="index">
+            <button 
+              v-if="!todo.isDone"
+              class="btn btn-sm btn-success mr-2" 
+              v-on:click="todo.isDone = !todo.isDone"
+            >
+            to do
+            </button>              
+            <button 
+              v-else
+              class="btn btn-sm btn-secondary mr-2" 
+              v-on:click="todo.isDone = !todo.isDone"
+            >
+            done
+            </button>
+            
+            <button 
+              class="btn btn-sm btn-danger mr-2" 
+              v-on:click="deleteSingleTodo(index)"
+            >
+              x
+            </button>
+            <span 
+              v-bind:class="{strikethrough:todo.isDone}"
+            >
+              {{ todo.description }}
+            </span>
+        </li>
+        </ul>
+    </div>
+
     </div>
 </template>
 
