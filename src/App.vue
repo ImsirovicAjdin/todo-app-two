@@ -18,3 +18,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+#app {
+  max-width: 500px;
+  margin: 30px auto;
+}
+</style>
