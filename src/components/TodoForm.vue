@@ -96,3 +96,17 @@ import { BForm, BFormInput, BButton } from "bootstrap-vue";
     },
   }
 </script>
+
+<style scoped>
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+.strikethrough {
+  text-decoration: line-through;
+  opacity: 0.25
+}
+</style>
