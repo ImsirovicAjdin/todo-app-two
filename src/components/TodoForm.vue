@@ -84,11 +84,15 @@ import { BForm, BFormInput, BButton } from "bootstrap-vue";
         this.todos.push({ description: this.someVar, isDone: false });
         this.someVar = "";
       },
+      deleteSingleTodo(index) {
+        console.log(this.todos[index]);
+        this.todos.splice(index, 1);
+      },      
       clearAllTodos() {
           if (confirm("Are you sure?")) {
             this.todos = [];
           }
       },      
-    }
+    },
   }
 </script>
